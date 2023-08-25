@@ -317,3 +317,28 @@ a {
     height: 400px;
     padding: 40px;
 }
+/* media */
+.media {
+    display: flex;
+    margin: 30px;
+} 
+
+.media__image {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+.media__body {
+    align-self: flex-start;
+    margin-left: 30px;
+}
+
+.media__title {
+    margin: 0;
+}
+
+.media__body p {
+    margin: 10px;
+    margin-left: 0;
+    font-size: 2rem;
+}
