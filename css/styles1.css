@@ -249,3 +249,71 @@ a {
         font-size: 1.5rem;
     }
 }
+/*card*/
+.card {
+    margin: 30px 70px;
+    width: 500px;
+}
+
+.card--secondry {
+    box-shadow: rgba(149, 137, 137, 0.15) 0px 5px 50px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card--header {
+    display: grid;
+    background: var(--color-secondary);
+    color: #fff;
+    padding: 20px 30px;
+    grid-template: 50px 100px 50px / repeat(3, 100px);
+}
+
+.card--cash {
+    font-size: 6rem;
+    grid-row: 2 / 2;
+    justify-content: start;
+    align-items: start;
+}
+
+.card--time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+}
+
+.card--header .card--entry {
+    display: flex;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin: 0;
+    padding: 0;
+    grid-column: 1 / 4;
+    align-items: center;
+}
+
+.card--detail {
+    display: flex;
+    font-size: 2rem;
+    grid-column: span 3;
+    align-items: center;
+}
+
+.card--off {
+    display: block;
+    font-size: 1.6rem;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #02cdf1;
+}
+
+.card--body {
+    height: 400px;
+    padding: 40px;
+}
