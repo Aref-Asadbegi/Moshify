@@ -9,7 +9,7 @@ html {
     --color-heading: #1b0760;
     --color-body: #918ca4;
     --color-border: #ccc;
-    --border-radius: 30px;
+    --border-radius: 10px;
     --color-body-darker: #5c5577;
 }
 /* Typography */
@@ -139,14 +139,18 @@ a {
 .icon {
     width: 40px;
     height: 40px;
+    color: white;
+}
+
+.icon--accent {
+    fill: var(--color-accent);
 }
 
 .icon--primary {
-    fill: var(--color-primary);
+    background: var(--color-primary);
 }
 
 .icon-container {
-    background: #f3f9fa;
     height: 64px;
     width: 64px;
     border-radius: 100%;
@@ -154,9 +158,14 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.icon--white {
+    fill: white;
+}
+
 /*Buttons*/
 .btn {
-    border-radius: var(--border-radius);
+    border-radius: 30px;
     border: 0;
     cursor: pointer;
     padding: 1rem;
@@ -179,7 +188,7 @@ a {
     color: #fff;
 }
 
-.btn--secondry:hover {
+.btn--secondary:hover {
     background: #00c8eb;
 }
 
@@ -252,8 +261,11 @@ a {
 }
 /*card*/
 .card {
+    border-radius: var(--border-radius);
     margin: 30px 70px;
+    overflow: hidden;
     width: 500px;
+    box-shadow: 0 0 20px 30px rgba(211, 211, 211, 0.386);
 }
 
 .card--secondry {
@@ -318,6 +330,12 @@ a {
     height: 400px;
     padding: 40px;
 }
+
+.card--grid {
+    margin-right: 50px;
+    max-width: 800px;
+    justify-content: center;
+}
 /* media */
 .media {
     display: flex;
@@ -376,3 +394,71 @@ a {
     font-weight: 500;
     font-style: normal;
 }
+/* Grids */
+.grid {
+    display: grid;
+}
+
+.card--grid {
+    padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .grid--1times2 {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Callout */
+.callout {
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.callout__heading {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.callout--btn {
+    align-self: center;
+    justify-self: center;
+    margin: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.callout--content {
+    text-align: center;
+}
+
+.callout--text {
+    font-size: 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .callout .grid--1times2 {
+        grid-template-columns: 1fr auto;
+    }
+    
+    .callout--content {
+        text-align: left;
+    }
+
+    .callout--btn {
+        justify-self: start;
+        margin-left: 0 2rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .callout--btn {
+        font-size: 2rem;
+    }
+}
+/* Navbars */ 
